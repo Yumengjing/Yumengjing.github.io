@@ -1,4 +1,8 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="平凡人做平凡事"><title>《Orale查询优化改》读后笔记 | 羽梦涟漪</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">《Orale查询优化改》读后笔记</h1><a id="logo" href="/.">羽梦涟漪</a><p class="description">羽梦的博客</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">《Orale查询优化改》读后笔记</h1><div class="post-meta">Oct 10, 2018<span> | </span><span class="category"><a href="/categories/数据库/">数据库</a></span></div><div class="post-content"><h3 id="第一章单表查询："><a href="#第一章单表查询：" class="headerlink" title="第一章单表查询："></a>第一章单表查询：</h3><h4 id="1-3-查找空值-和-null对于不同的函数起不同作用"><a href="#1-3-查找空值-和-null对于不同的函数起不同作用" class="headerlink" title="1.3 查找空值 和 null对于不同的函数起不同作用"></a>1.3 查找空值 和 null对于不同的函数起不同作用</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">replace</span>(<span class="string">'strng'</span>,<span class="string">'a'</span>,<span class="string">'b'</span>)	<span class="comment">--在string查找a,然后用b替换</span></span><br><span class="line"><span class="keyword">greatest</span>(<span class="string">'a'</span>,<span class="string">'b'</span>) <span class="comment">--返回最大值，其中字符串和数值比较各有不同，当数和字符串比较会提示错误</span></span><br></pre></td></tr></table></figure>
+<head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="平凡人做平凡事"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head>
+<body class="loading">
+    <span id="config-title" style="display:none">羽梦涟漪</span>
+    <div id="loader"></div>
+    <!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="平凡人做平凡事"><title>《Orale查询优化改》读后笔记 | 羽梦涟漪</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">《Orale查询优化改》读后笔记</h1><a id="logo" href="/.">羽梦涟漪</a><p class="description">羽梦的博客</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">《Orale查询优化改》读后笔记</h1><div class="post-meta">Oct 10, 2018<span> | </span><span class="category"><a href="/categories/数据库/">数据库</a></span></div><div class="post-content"><h3 id="第一章单表查询："><a href="#第一章单表查询：" class="headerlink" title="第一章单表查询："></a>第一章单表查询：</h3><h4 id="1-3-查找空值-和-null对于不同的函数起不同作用"><a href="#1-3-查找空值-和-null对于不同的函数起不同作用" class="headerlink" title="1.3 查找空值 和 null对于不同的函数起不同作用"></a>1.3 查找空值 和 null对于不同的函数起不同作用</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">replace</span>(<span class="string">'strng'</span>,<span class="string">'a'</span>,<span class="string">'b'</span>)	<span class="comment">--在string查找a,然后用b替换</span></span><br><span class="line"><span class="keyword">greatest</span>(<span class="string">'a'</span>,<span class="string">'b'</span>) <span class="comment">--返回最大值，其中字符串和数值比较各有不同，当数和字符串比较会提示错误</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-4-将空值转换为实际值"><a href="#1-4-将空值转换为实际值" class="headerlink" title="1.4 将空值转换为实际值"></a>1.4 将空值转换为实际值</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">coalesce 和 nvl ，获取第一个不为空的值，其中coalesce支持多个参数，比nvl更好</span><br><span class="line">coalesce('','','','') 	<span class="comment">--同时多个参数</span></span><br><span class="line">nvl(nvl('',''),'')		<span class="comment">--多层嵌套，每次只能比较两个数值</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-7-为列名取有意义的名称"><a href="#1-7-为列名取有意义的名称" class="headerlink" title="1.7.为列名取有意义的名称"></a>1.7.为列名取有意义的名称</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span>  A <span class="keyword">as</span> B <span class="keyword">from</span> <span class="keyword">table</span>; </span><br><span class="line"><span class="keyword">select</span> A B <span class="keyword">from</span> <span class="keyword">table</span>; </span><br><span class="line">上述两个意思一样，将A列名改为B</span><br></pre></td></tr></table></figure>
 <h4 id="1-8-在where-子句中引用取别名的列-需要嵌套一层select"><a href="#1-8-在where-子句中引用取别名的列-需要嵌套一层select" class="headerlink" title="1.8 在where 子句中引用取别名的列,需要嵌套一层select"></a>1.8 在where 子句中引用取别名的列,需要嵌套一层select</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *  <span class="keyword">from</span> (<span class="keyword">select</span> A <span class="keyword">as</span> B <span class="keyword">from</span> <span class="keyword">table</span>) <span class="keyword">where</span> B = <span class="string">"b"</span></span><br></pre></td></tr></table></figure>
@@ -47,3 +51,65 @@ if (search_path.length == 0) {
 var path = '/' + search_path;
 searchFunc(path, 'local-search-input', 'local-search-result');
 </script><script type="text/javascript" color="100,99,98" opacity="0.7" zindex="1" count="150" src="//lib.baomitu.com/canvas-nest.js/2.0.3/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
