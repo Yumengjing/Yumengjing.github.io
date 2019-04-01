@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="平凡人做平凡事"><title>dotnet Core 入门视频学习 | 羽梦涟漪</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">dotnet Core 入门视频学习</h1><a id="logo" href="/.">羽梦涟漪</a><p class="description">羽梦的博客</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">dotnet Core 入门视频学习</h1><div class="post-meta">Mar 1, 2019<span> | </span><span class="category"><a href="/categories/Net-Core/">.Net Core</a></span></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><!-- span.post-meta-item-text= " 字数统计："--><span class="post-count"> 678</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time">&nbsp; | &nbsp;<span class="post-meta-item-icon"><i class="fa fa-hourglass-half"></i><!-- span.post-meta-item-text= " 阅读时长："--><span class="post-count"> 3</span><span class="post-meta-item-text"> 分钟</span></span></span><div class="post-content"><h2 id="2019-03-13-ASP-NET"><a href="#2019-03-13-ASP-NET" class="headerlink" title="2019-03-13 ASP.NET"></a>2019-03-13 ASP.NET</h2><h3 id="第三章-依赖注入"><a href="#第三章-依赖注入" class="headerlink" title="第三章 依赖注入"></a>第三章 依赖注入</h3><ul>
+<li><strong>从UML 角度理解依赖</strong><ol>
+<li>什么是依赖（任务17）<br> 可以简单的理解，就是一个类A使用到了另外一个类B,而这种关系是具有偶然性、临时性的、非常脆肉，但是B类的变化会影响到A.</li>
+<li>显式依赖与隐式依赖</li>
+<li>依赖倒置原则</li>
+</ol>
+</li>
+<li><strong>控制反转</strong></li>
+<li><strong>单元测试</strong></li>
+<li><strong>DI初始化的源码解读</strong></li>
+<li><strong>依赖注入的使用</strong><blockquote>
+<p>依赖注入的使用 博客文章 <a href="http://www.jessetalk.cn/2017/11/06/di-in-aspnetcore/" target="_blank" rel="noopener">http://www.jessetalk.cn/2017/11/06/di-in-aspnetcore/</a> </p>
+</blockquote>
+</li>
+</ul>
+<h3 id="第四章ASP-NET-Core-HTTP-介绍"><a href="#第四章ASP-NET-Core-HTTP-介绍" class="headerlink" title="第四章ASP.NET Core HTTP 介绍"></a>第四章ASP.NET Core HTTP 介绍</h3><ul>
+<li><strong>ASP.NET CORE-HTTP 处理过程</strong></li>
+<li><strong>WebHost的配置与启动</strong><ol>
+<li>覆盖配置文件<br>项目=》调试=&gt;引用程序参数<br>配置文件：选择项目名称 启动：选择项目 应用程序参数填写：name=yumeng<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">代码：Startup.cs</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Configure</span>(<span class="params">IApplicationBuilder app, IHostingEnvironment env,IConfiguration configuration</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (env.IsDevelopment())</span><br><span class="line">        &#123;</span><br><span class="line">            app.UseDeveloperExceptionPage();</span><br><span class="line">        &#125;</span><br><span class="line">        app.Run(<span class="keyword">async</span> (context) =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//await context.Response.WriteAsync("Hello World!");</span></span><br><span class="line">            <span class="comment">//显示settin.json 值</span></span><br><span class="line">            <span class="comment">//await context.Response.WriteAsync(configuration["ConnectionStrings:DefaultConnection"]);</span></span><br><span class="line">            <span class="comment">//读取应用程序的参数</span></span><br><span class="line">            <span class="keyword">await</span> context.Response.WriteAsync(<span class="string">$"name = <span class="subst">&#123;configuration[<span class="string">"name"</span>]&#125;</span>"</span>); </span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li><p>更改启动的URL<a href="https://blog.wayneshao.com/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9-.NET-Core.html" target="_blank" rel="noopener"><strong>（友方链接：修改URL详细介绍）</strong></a></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IWebHostBuilder <span class="title">CreateWebHostBuilder</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span> =&gt;</span><br><span class="line">          WebHost.CreateDefaultBuilder(args)</span><br><span class="line">              <span class="comment">//更改配置 默认读取appsettingjson.json 文件夹</span></span><br><span class="line">              .ConfigureAppConfiguration(config =&gt;</span><br><span class="line">              &#123;</span><br><span class="line">                  config.AddJsonFile(<span class="string">"setting.json"</span>);</span><br><span class="line">                  <span class="comment">//命令行引入</span></span><br><span class="line">                  config.AddCommandLine(args);</span><br><span class="line">              &#125;)</span><br><span class="line">             <span class="comment">// .UseUrls("http://localhost:5001")</span></span><br><span class="line">              .UseStartup&lt;Startup&gt;();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IHostingEnvironment</p>
+</li>
+<li>IApplicationLifetime</li>
+<li>dotnet watch rum</li>
+</ol>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="第五章-任务31"><a href="#第五章-任务31" class="headerlink" title="第五章 任务31"></a>第五章 任务31</h4><ul>
+<li><strong>Cooie-based 认证与授权</strong></li>
+<li><strong>cookie based 认证与实现</strong></li>
+<li><strong>Jwt 认证与授权介绍</strong></li>
+<li><strong>Jwt 认证与授权的实现</strong></li>
+<li><strong>Jwt 认证与授权</strong> </li>
+<li><strong>Role based 授权</strong></li>
+<li><strong>Claims-based授权</strong></li>
+</ul>
+<h5 id="1-Cooie-based-认证与授权"><a href="#1-Cooie-based-认证与授权" class="headerlink" title="1.Cooie-based 认证与授权"></a>1.Cooie-based 认证与授权</h5><h5 id="2-Cooie-based-认证与授权"><a href="#2-Cooie-based-认证与授权" class="headerlink" title="2.Cooie-based 认证与授权"></a>2.Cooie-based 认证与授权</h5><h5 id="3-1Jwt-认证与授权介绍"><a href="#3-1Jwt-认证与授权介绍" class="headerlink" title="3.1Jwt 认证与授权介绍"></a>3.1Jwt 认证与授权介绍</h5><h5 id="3-2应用-JWTBearer-Authenticationn"><a href="#3-2应用-JWTBearer-Authenticationn" class="headerlink" title="3.2应用 JWTBearer Authenticationn"></a>3.2应用 JWTBearer Authenticationn</h5><pre><code>1.https://jwt.io
+2.postman 调试api 工具
+</code></pre><h5 id="4-JWT-设计解析与定制"><a href="#4-JWT-设计解析与定制" class="headerlink" title="4.JWT 设计解析与定制"></a>4.JWT 设计解析与定制</h5><h5 id="5-Role以及Clains-授权"><a href="#5-Role以及Clains-授权" class="headerlink" title="5.Role以及Clains 授权"></a>5.Role以及Clains 授权</h5><h2 id="2019-03-17-ASP-NET-CORE-MVC"><a href="#2019-03-17-ASP-NET-CORE-MVC" class="headerlink" title="2019-03-17 ASP.NET CORE MVC"></a>2019-03-17 ASP.NET CORE MVC</h2><h4 id="任务-40-50"><a href="#任务-40-50" class="headerlink" title="任务 40-50"></a>任务 40-50</h4><ul>
+<li><strong>41 individual authentication 模板</strong></li>
+</ul>
+<pre><code>查看MVC的帮助
+dotnet new MVC --help 
+新建项目
+dotnet new MVC -au individual -uld --name IdentityAample 
+根据项目设置生产database
+dotnet ef databae update
+</code></pre><ul>
+<li><p><strong>42.EF Core Miagration</strong></p>
+</li>
+<li><p><strong>ASP.NET Core MVC -EF Migration</strong></p>
+<table><br>  <tr><br>      <td bgcolor="#FF694">序号</td><br>      <td bgcolor="#FF69B4">命令</td><br>      <td bgcolor="#7B68EE">英文解析</td><br>      <td bgcolor="#ADFF2F">中文解析</td><br> </tr><br>  <tr><br>      <td>一</td><br>      <td colspan="3">1.手动命令行的方式</td><br>  </tr><br>  <tr><br>      <td>二</td><br>      <td colspan="3">2.代码自动方式</td><br>  </tr><br>   <tr><br>      <td>1</td><br>      <td>dotnet ef migrations add initialCreate </td><br>      <td>Add Migration</td><br>      <td>添加迁移</td><br>  </tr><br>  <tr><br>      <td>2</td><br>      <td>dotnet ef database update</td><br>      <td>Update Database</td><br>      <td>更新数据模型</td><br>  </tr><br>  <tr><br>      <td>3</td><br>      <td>dotnet ef migrations remove</td><br>      <td>Remove MIgration</td><br>      <td>移除迁移</td><br>  </tr><br>  <tr><br>      <td>4</td><br>      <td>dotnet ef database update Last GoodMigration</td><br>      <td>Update Database LastGoodMigration</td><br>      <td>更新数据库上次良好的迁移</td><br>  </tr><br>  <tr><br>      <td>5</td><br>      <td>dotnet ef migrations script</td><br>      <td>Script Migration</td><br>      <td>脚本迁移</td><br>  </tr><br>  <tr><br>      <td>6</td><br>      <td>dotnet ef migrations add VSinit</td><br>      <td></td><br>      <td></td><br>  </tr><br></table>
+
+
+</li>
+</ul>
+<ul>
+<li><strong>43 Identity MVC UI</strong></li>
+<li><strong>44 Identity MVC :EF + identity 实现 登录注册</strong></li>
+<li><strong>45 Identity MVC :注册逻辑实现</strong></li>
+<li><strong>46 Identity MVC :登录逻辑实现</strong></li>
+<li><strong>47 Identity MVC :ReturnUrl 实现</strong></li>
+<li><strong>48 Identity MVC :Model 后端验证</strong></li>
+<li><strong>49 Identity MVC :Model 前端校验</strong></li>
+<li><strong>49 Identity MVC :DBContextSeed 初始化</strong></li>
+</ul>
+</div><div class="tags"><a href="/tags/入门/">入门</a></div><div class="post-nav"><a class="pre" href="/2019/03/26/NetCore的入门认识/">.NetCore的入门认识和创建</a><a class="next" href="/2018/10/29/最小可行化产品MVP/">MVP——最小可行化产品</a></div></span></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Net-Core/">.Net Core</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web前端/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/入门/" style="font-size: 15px;">入门</a> <a href="/tags/测试/" style="font-size: 15px;">测试</a> <a href="/tags/产品/" style="font-size: 15px;">产品</a> <a href="/tags/MVP/" style="font-size: 15px;">MVP</a> <a href="/tags/最小可行化/" style="font-size: 15px;">最小可行化</a> <a href="/tags/最简可行/" style="font-size: 15px;">最简可行</a> <a href="/tags/Oracl/" style="font-size: 15px;">Oracl</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/04/01/dotnet-Core-Web应用之Razor/">dotnet Core Web应用之Razor</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/26/NetCore的入门认识/">.NetCore的入门认识和创建</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/01/dotnet Core 入门学习/">dotnet Core 入门视频学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/29/最小可行化产品MVP/">MVP——最小可行化产品</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/10/《Orale查询优化改写》读后笔记/">《Orale查询优化改》读后笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.wayneshao.com/" title="玮仔Wayne" target="_blank">玮仔Wayne</a><ul></ul><a href="https://blog.chcaty.cn/" title="小猫" target="_blank">小猫</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">羽梦涟漪.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="100,99,98" opacity="0.7" zindex="1" count="150" src="//lib.baomitu.com/canvas-nest.js/2.0.3/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
